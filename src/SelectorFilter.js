@@ -56,15 +56,17 @@ class SelectorFilter {
                 return
             }
             let words = getAllWordsInSelector(selector),
-                usedWords = words.filter(word => contentWords[word])
+                usedWords = words.filter(word => contentWords[word.replace('\\', '')])
 
             if (usedWords.length === words.length) {
                 usedSelectors.push(selector)
             } else {
+                console.log(usedWords, words)
                 rejectedSelectors.push(selector)
             }
         })
 
+        console.log(usedSelectors)
         return usedSelectors
     }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "purify-css",
-  "version": "1.2.6",
-  "description": "Removed unused css. Compatible with single-page apps.",
+  "name": "purifycss-extended",
+  "version": "1.2.7",
+  "description": "Removed unused CSS. Compatible with single-page apps.",
   "main": "./lib/purifycss.js",
   "module": "./lib/purifycss.es.js",
   "jsnext:main": "./lib/purifycss.es.js",
@@ -30,21 +30,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/purifycss/purifycss.git"
+    "url": "https://github.com/HapLifeMan/purifycss-extended.git"
   },
   "keywords": [
+    "purify",
+    "extended",
     "optimize",
     "css",
     "remove",
     "unused"
   ],
-  "author": "Kenny Tran, Matthew Rourke, Phoebe Li",
+  "author": "Kenny Tran, Matthew Rourke, Phoebe Li, Thomas Reichling",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/purifycss/purifycss/issues"
+    "url": "https://github.com/HapLifeMan/purifycss-extended/issues"
   },
   "bin": {
     "purifycss": "./bin/purifycss"
   },
-  "homepage": "https://github.com/purifycss/purifycss"
+  "homepage": "https://github.com/HapLifeMan/purifycss-extended"
 }

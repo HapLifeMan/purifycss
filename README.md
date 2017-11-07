@@ -29,8 +29,8 @@ npm i -D purify-css
 ```
 
 ```javascript
-import purifycss from "purify-css"
-const purifycss = require("purify-css")
+import purifycss from "purifycss-extended"
+const purifycss = require("purifycss-extended")
 
 let content = ""
 let css = ""
@@ -49,7 +49,7 @@ purify(content, css, options)
 ### CLI Usage
 
 ```
-$ npm install -g purify-css
+$ npm install -g purifycss-extended
 ```
 
 ```

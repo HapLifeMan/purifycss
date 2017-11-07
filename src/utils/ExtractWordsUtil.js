@@ -8,9 +8,9 @@ export const getAllWordsInContent = content => {
         html: true,
         body: true
     }
-    const words = content.split(/[^a-z]/g)
+    const words = content.split(/[^a-zA-Z0-9\\:-]/g)
     for (let word of words) {
-        used[word] = true
+        if(word) used[word] = true
     }
     return used
 }
@@ -27,17 +27,19 @@ export const getAllWordsInSelector = selector => {
         word = "",
         words = []
 
+    let last_letter = '';
     for (let letter of selector) {
         if (skipNextWord && !(/[ #.]/).test(letter)) continue
         // If pseudoclass or universal selector, skip the next word
-        if (/[:*]/.test(letter)) {
+        if (/[:*]/.test(letter) && last_letter != '\\') {
             addWord(words, word)
             word = ""
             skipNextWord = true
             continue
         }
-        if (/[a-z]/.test(letter)) {
+        if (/[a-zA-Z0-9\\:-]/.test(letter)) {
             word += letter
+            last_letter = letter
         } else {
             addWord(words, word)
             word = ""
