@@ -1,13 +1,17 @@
-# PurifyCSS  
+# PurifyCSS Extended
 
-[![Travis](https://img.shields.io/travis/purifycss/purifycss/master.svg)]()
-[![npm](https://img.shields.io/npm/dm/purify-css.svg)]()
-[![David](https://img.shields.io/david/purifycss/purifycss.svg)]()
-![Join the chat at https://gitter.im/purifycss/purifycss](https://badges.gitter.im/purifycss/purifycss.svg)
+[![Travis](https://img.shields.io/travis/HapLifeMan/purifycss-extended/master.svg)]()
+[![Downloads](https://img.shields.io/npm/dt/purifycss-extended.svg)](https://www.npmjs.com/package/purifycss-extended)
+[![Realease](https://img.shields.io/npm/v/purifycss-extended.svg)](https://github.com/HapLifeMan/purifycss-extended/releases)
+[![License](https://img.shields.io/npm/l/tailwindcss.svg)](https://github.com/HapLifeMan/purifycss-extended/blob/master/LICENSE)
 
+**This is a fork from the original [purifycss/purifycss](https://github.com/purifycss/purifycss).
+Since it's not maintained for months and pull requests not merged, I decided to create a new NPM package called `purifycss-extended` based on it with some fixes.**
+
+**Everything runs as the original `purifycss` package, commands haven't changed.**
 
 A function that takes content (HTML/JS/PHP/etc) and CSS, and returns only the **used CSS**.  
-PurifyCSS does not modify the original CSS files. You can write to a new file, like minification.  
+PurifyCSS Extended does not modify the original CSS files. You can write to a new file, like minification.  
 If your application is using a CSS framework, this is especially useful as many selectors are often unused.
 
 ### Potential reduction
