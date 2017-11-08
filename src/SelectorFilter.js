@@ -50,6 +50,7 @@ class SelectorFilter {
             wildcardWhitelist = this.wildcardWhitelist,
             usedSelectors = []
 
+        // console.log(selectors)
         selectors.forEach(selector => {
             if (hasWhitelistMatch(selector, wildcardWhitelist)) {
                 usedSelectors.push(selector)
@@ -58,9 +59,9 @@ class SelectorFilter {
             let words = getAllWordsInSelector(selector),
                 usedWords = words.filter(word => contentWords[word.replace('\\', '')])
 
-            // console.log(words, contentWords)
+            // console.log(words, usedWords, selector)
             if (usedWords.length === words.length) {
-                usedSelectors.push(selector)
+                usedSelectors.push(selector.replace('\\', ''))
             } else {
                 rejectedSelectors.push(selector)
             }

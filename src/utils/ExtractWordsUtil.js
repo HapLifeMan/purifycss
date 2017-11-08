@@ -8,9 +8,8 @@ export const getAllWordsInContent = content => {
         html: true,
         body: true
     }
-    const words = content.split(/[^a-zA-Z0-9\\@+:]/g)
+    const words = content.split(/[^a-zA-Z0-9\\@+]/g)
     for (let word of words) {
-        if(word.substring(word.length-1) === "-") { word = word.substring(0, word.length-1); }
         if(word && word !== "+") { used[word] = true }
     }
     return used
@@ -19,6 +18,7 @@ export const getAllWordsInContent = content => {
 export const getAllWordsInSelector = selector => {
     // Remove attr selectors. "a[href...]"" will become "a".
     selector = selector.replace(/\[(.+?)\]/g, "").toLowerCase()
+    console.log(selector)
     // If complex attr selector (has a bracket in it) just leave
     // the selector in. ¯\_(ツ)_/¯
     if (selector.includes("[") || selector.includes("]")) {
@@ -33,16 +33,16 @@ export const getAllWordsInSelector = selector => {
         if (skipNextWord && !(/[ #.]/).test(letter)) continue
         // If pseudoclass or universal selector, skip the next word
         if (/[:*]/.test(letter) && last_letter != '\\') {
-            addWord(words, word)
+            addWord(words, word.replace('\\', ''))
             word = ""
             skipNextWord = true
             continue
         }
-        if (/[a-zA-Z0-9\\@+:]/.test(letter)) {
+        if (/[a-zA-Z0-9\\@+]/.test(letter)) {
             word += letter
             last_letter = letter
         } else {
-            addWord(words, word)
+            addWord(words, word.replace('\\', ''))
             word = ""
             skipNextWord = false
         }

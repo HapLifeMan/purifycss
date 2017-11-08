@@ -1,0 +1,23 @@
+/* Existant CSS in file (alone) */
+.mr-10 { color: dodgerblue; }
+.-mr-10 { color: dodgerblue; }
+.lg\:mr-10 { color: white; }
+.lg\:-mr-10 { color: white; }
+.tw-sm\:mr-10 { color: crimson; }
+.tw-sm\:-mr-10 { color: crimson; }
+
+/* Existant CSS in file (surrounded by other classes) */
+.mr-20 { color: dodgerblue; }
+.-mr-20 { color: dodgerblue; }
+.lg\:mr-20 { color: white; }
+.lg\:-mr-20 { color: white; }
+.tw-sm\:mr-20 { color: crimson; }
+.tw-sm\:-mr-20 { color: crimson; }
+
+/* Inexistant CSS in file */
+.mr-50 { color: dodgerblue; }
+.-mr-50 { color: dodgerblue; }
+.lg\:mr-50 { color: white; }
+.lg\:-mr-50 { color: white; }
+.tw-sm\:mr-50 { color: crimson; }
+.tw-sm\:-mr-50 { color: crimson; }
