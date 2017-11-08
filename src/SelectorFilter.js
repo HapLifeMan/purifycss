@@ -61,12 +61,10 @@ class SelectorFilter {
             if (usedWords.length === words.length) {
                 usedSelectors.push(selector)
             } else {
-                console.log(usedWords, words)
                 rejectedSelectors.push(selector)
             }
         })
 
-        console.log(usedSelectors)
         return usedSelectors
     }
 }
