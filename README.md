@@ -25,7 +25,7 @@ If your application is using a CSS framework, this is especially useful as many 
 Installation  
 
 ```bash
-npm i -D purify-css
+npm i -D purifycss-extended
 ```
 
 ```javascript
