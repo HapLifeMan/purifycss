@@ -180,15 +180,19 @@ describe("special characters", () => {
         result = purify(content, css)
 
     it("finds @home", () => {
-        expect(result.includes("@home") === true).toBe(true)
+        expect(result.includes(".\\@home") === true).toBe(true)
     })
 
     it("finds +rounded", () => {
-        expect(result.includes("+rounded") === true).toBe(true)
+        expect(result.includes(".\\+rounded") === true).toBe(true)
     })
 
     it("finds button", () => {
-        expect(result.includes("button") === true).toBe(true)
+        expect(result.includes(".button") === true).toBe(true)
+    })
+
+    it("finds button@home", () => {
+        expect(result.includes(".button\\@home") === true).toBe(true)
     })
 })
 
@@ -267,19 +271,19 @@ describe("special", () => {
     })
 
     it("finds lg:mr-10 (alone)", () => {
-        expect(result.includes(".lg\:mr-10") === true).toBe(true)
+        expect(result.includes(".lg\\:mr-10") === true).toBe(true)
     })
 
     it("finds lg:-mr-10 (alone)", () => {
-        expect(result.includes(".lg\:-mr-10") === true).toBe(true)
+        expect(result.includes(".lg\\:-mr-10") === true).toBe(true)
     })
 
     it("finds tw-sm:mr-10 (alone)", () => {
-        expect(result.includes(".tw-sm\:mr-10") === true).toBe(true)
+        expect(result.includes(".tw-sm\\:mr-10") === true).toBe(true)
     })
 
     it("finds tw-sm:-mr-10 (alone)", () => {
-        expect(result.includes(".tw-sm\:-mr-10") === true).toBe(true)
+        expect(result.includes(".tw-sm\\:-mr-10") === true).toBe(true)
     })
 
     it("finds mr-20 (surrounded)", () => {
@@ -291,19 +295,19 @@ describe("special", () => {
     })
 
     it("finds lg:mr-20 (surrounded)", () => {
-        expect(result.includes(".lg\:mr-20") === true).toBe(true)
+        expect(result.includes(".lg\\:mr-20") === true).toBe(true)
     })
 
     it("finds lg:-mr-20 (surrounded)", () => {
-        expect(result.includes(".lg\:-mr-20") === true).toBe(true)
+        expect(result.includes(".lg\\:-mr-20") === true).toBe(true)
     })
 
     it("finds tw-sm:mr-20 (surrounded)", () => {
-        expect(result.includes(".tw-sm\:mr-20") === true).toBe(true)
+        expect(result.includes(".tw-sm\\:mr-20") === true).toBe(true)
     })
 
     it("finds tw-sm:-mr-20 (surrounded)", () => {
-        expect(result.includes(".tw-sm\:-mr-20") === true).toBe(true)
+        expect(result.includes(".tw-sm\\:-mr-20") === true).toBe(true)
     })
 
     it("removes mr-50", () => {
@@ -315,19 +319,19 @@ describe("special", () => {
     })
 
     it("removes lg:mr-50", () => {
-        expect(result.includes(".lg\:mr-50") === true).toBe(false)
+        expect(result.includes(".lg\\:mr-50") === true).toBe(false)
     })
 
     it("removes lg:-mr-50", () => {
-        expect(result.includes(".lg\:-mr-50") === true).toBe(false)
+        expect(result.includes(".lg\\:-mr-50") === true).toBe(false)
     })
 
     it("removes tw-sm:mr-50", () => {
-        expect(result.includes(".tw-sm\:mr-50") === true).toBe(false)
+        expect(result.includes(".tw-sm\\:mr-50") === true).toBe(false)
     })
 
     it("removes tw-sm:-mr-50", () => {
-        expect(result.includes(".tw-sm\:-mr-50") === true).toBe(false)
+        expect(result.includes(".tw-sm\\:-mr-50") === true).toBe(false)
     })
 
 })
