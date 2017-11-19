@@ -46,9 +46,9 @@ purify(content, css, options)
 
 ### Build Time
 
-- [Grunt](https://github.com/purifycss/grunt-purifycss)
-- [Gulp](https://github.com/purifycss/gulp-purifycss)
-- [Webpack](https://github.com/purifycss/purifycss-webpack-plugin)
+- [Grunt](https://github.com/purifycss/grunt-purifycss) (old purifycss, open an issue if you are interested in)
+- [Gulp](https://github.com/purifycss/gulp-purifycss) (old purifycss, open an issue if you are interested in)
+- [Webpack](https://github.com/HapLifeMan/purifycss-extended-webpack) **extended special**
 
 ### CLI Usage
 
