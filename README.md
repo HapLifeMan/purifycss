@@ -5,6 +5,9 @@
 [![Realease](https://img.shields.io/npm/v/purifycss-extended.svg)](https://github.com/HapLifeMan/purifycss-extended/releases)
 [![License](https://img.shields.io/npm/l/tailwindcss.svg)](https://github.com/HapLifeMan/purifycss-extended/blob/master/LICENSE)
 
+### This repo is no longer maintainer, I suggest you to user [PurgeCSS](https://github.com/FullHuman/PurgeCSS), which is better. It checks classes name instead of each word in files as PurifyCSS.  
+
+
 **This is a fork from the original [purifycss/purifycss](https://github.com/purifycss/purifycss).
 Since it's not maintained for months and pull requests not merged, I decided to create a new NPM package called `purifycss-extended` based on it with some fixes.**
 
